@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+lang="en" xml:lang="en">
+<head>
+<title>wapiti-readme</title>
+<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2014-09-15 15:48:22 IST"/>
+<meta name="author" content="Ishan Sharma"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+
+<h1 class="title">wapiti-readme</h1>
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 Requirements </a></li>
+<li><a href="#sec-2">2 How it works </a></li>
+<li><a href="#sec-3">3 General features </a></li>
+<li><a href="#sec-4">4 Browsing features </a></li>
+<li><a href="#sec-5">5 Supported attacks </a></li>
+<li><a href="#sec-6">6 How to get the best results </a></li>
+<li><a href="#sec-7">7 Where to get help </a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Requirements </h2>
+<div class="outline-text-2" id="text-1">
+
+<p>In order to work correctly, Wapiti needs :
+</p><ul>
+<li>
+Python 2.x where x is &gt;= 6 (2.6, 2.7&hellip;)
+</li>
+<li>
+python-requests v1.2.3 or more ( <a href="http://docs.python-requests.org/en/latest/">http://docs.python-requests.org/en/latest/</a> )
+</li>
+<li>
+BeautifulSoup ( <a href="http://www.crummy.com/software/BeautifulSoup/">http://www.crummy.com/software/BeautifulSoup/</a> )
+</li>
+<li>
+python-xml
+
+
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> How it works </h2>
+<div class="outline-text-2" id="text-2">
+
+<p>Wapiti works as a "black-box" vulnerability scanner,  that means it won't
+study the source code of web applications but will work like a  fuzzer,
+scanning the pages of the deployed web application, extracting links and
+forms  and attacking  the scripts, sending payloads and looking for error
+messages, special strings or abnormal behaviors.
+</p>
+
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> General features </h2>
+<div class="outline-text-2" id="text-3">
+
+<ul>
+<li>
+Generates vulnerability reports in various formats (HTML, XML, JSON, TXT&hellip;)
+</li>
+<li>
+Can suspend and resume a scan or an attack
+</li>
+<li>
+Can give you colors in the terminal to highlight vulnerabilities
+</li>
+<li>
+Different levels of verbosity
+</li>
+<li>
+Fast and easy way to activate/deactivate attack modules
+</li>
+<li>
+Adding a payload can be as easy as adding a line to a text file
+
+
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Browsing features </h2>
+<div class="outline-text-2" id="text-4">
+
+<ul>
+<li>
+Support HTTP and HTTPS proxies
+</li>
+<li>
+Authentication via several methods : Basic, Digest, Kerberos or NTLM
+</li>
+<li>
+Ability to restrain the scope of the scan (domain, folder, webpage)
+</li>
+<li>
+Automatic removal of a parameter in URLs
+</li>
+<li>
+Safeguards against scan endless-loops (max number of values for a parameter)
+</li>
+<li>
+Possibility to set the first URLs to explore (even if not in scope)
+</li>
+<li>
+Can exclude some URLs of the scan and attacks (eg: logout URL)
+</li>
+<li>
+Import of cookies (get them with the wapiti-cookie and wapiti-getcookie tools)
+</li>
+<li>
+Can activate / deactivate SSL certificates verification
+</li>
+<li>
+Extract URLs from Flash SWF files
+</li>
+<li>
+Try to extract URLs from javascript (very basic JS interpreter)
+</li>
+<li>
+HTML5 aware (understand recent HTML tags)
+
+
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Supported attacks </h2>
+<div class="outline-text-2" id="text-5">
+
+<ul>
+<li>
+Database Injection (PHP/ASP/JSP SQL Injections and XPath Injections)
+</li>
+<li>
+Cross Site Scripting (XSS) reflected and permanent
+</li>
+<li>
+File disclosure detection (local and remote include, require, fopen,
+readfile&hellip;)
+</li>
+<li>
+Command Execution detection (eval(), system(), passtru()&hellip;)
+</li>
+<li>
+XXE (Xml eXternal Entity) injection
+</li>
+<li>
+CRLF Injection
+</li>
+<li>
+Search for potentially dangerous files on the server (thanks to the Nikto db)
+</li>
+<li>
+Bypass of weak htaccess configurations
+</li>
+<li>
+Search for copies (backup) of scripts on the server
+
+</li>
+</ul>
+
+<p>Wapiti supports both GET and POST HTTP methods for attacks.
+It also supports multipart and can inject payloads in filenames (upload).
+Display a warning when an anomaly is found (for example 500 errors and timeouts)
+Makes the difference  beetween permanent  and reflected  XSS vulnerabilities.
+</p>
+
+</div>
+
+</div>
+
+<div id="outline-container-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> How to get the best results </h2>
+<div class="outline-text-2" id="text-6">
+
+<p>To find more vulnerabilities (as some attacks are error-based), you can modify
+your webserver configurations.
+</p>
+<p>
+For example, you can set the following values in your PHP configuration :
+safe<sub>mode</sub> = Off
+display<sub>errors</sub> = On (recommended)
+magic<sub>quotes</sub><sub>gpc</sub> = Off
+allow<sub>url</sub><sub>fopen</sub> = On
+mysql.trace<sub>mode</sub> = On
+</p>
+
+</div>
+
+</div>
+
+<div id="outline-container-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> Where to get help </h2>
+<div class="outline-text-2" id="text-7">
+
+<p>In the prompt, just type the following command to get the basic usage :
+python wapiti.py -h
+You can also take a look at the manpage.
+</p>
+<p>
+If you find a bug, fill a ticket on the bugtracker :
+<a href="https://sourceforge.net/p/wapiti/bugs/">https://sourceforge.net/p/wapiti/bugs/</a>
+</p></div>
+</div>
+<div id="postamble">
+<p class="author"> Author: Ishan Sharma
+<a href="mailto:ishan@Ishan-Vaio">&lt;ishan@Ishan-Vaio&gt;</a>
+</p>
+<p class="date"> Date: 2014-09-15 15:48:22 IST</p>
+<p class="creator">HTML generated by org-mode 6.33x in emacs 23</p>
+</div>
+</div>
+</body>
+</html>
