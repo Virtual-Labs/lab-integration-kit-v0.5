@@ -6,12 +6,12 @@
 CentOS 6.5 successfully installed on your machine
 
 ** Version Control Basics
- Version Control and Git[https://github.com/Virtual-Labs/lab-integration-kit-v0.5/blob/master/src/ovpl-kit/docs/src/version-control.org]
+ Version Control and Git[[https://github.com/Virtual-Labs/lab-integration-kit-v0.5/blob/master/src/ovpl-kit/docs/src/version-control.org]
 
 ** Installing OVPL
 
 *** Install OpenVZ
-[https://github.com/Virtual-Labs/lab-integration-kit-v0.5/blob/master/src/ovpl-kit/docs/src/openVZ-talk.org]openVZ Guidelines
+[[https://github.com/Virtual-Labs/lab-integration-kit-v0.5/blob/master/src/ovpl-kit/docs/src/openVZ-talk.org]] openVZ Guidelines
 
 *** Install Dependencies
 [https://github.com/Virtual-Labs/lab-integration-kit-v0.5/blob/master/src/ovpl-kit/docs/src/ovpl-installation.org] Dependencies for OVPL
