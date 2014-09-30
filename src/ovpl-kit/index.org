@@ -11,7 +11,7 @@ CentOS 6.5 successfully installed on your machine
 ** Installing OVPL
 
 *** Install OpenVZ
-[[https://github.com/Virtual-Labs/lab-integration-kit-v0.5/blob/master/src/ovpl-kit/docs/src/openVZ-talk.org]] openVZ Guidelines
+[[https://github.com/Virtual-Labs/lab-integration-kit-v0.5/blob/master/src/ovpl-kit/docs/src/openVZ-talk.org][openVZ Guidelines]]
 
 *** Install Dependencies
 [https://github.com/Virtual-Labs/lab-integration-kit-v0.5/blob/master/src/ovpl-kit/docs/src/ovpl-installation.org] Dependencies for OVPL
