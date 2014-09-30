@@ -7,8 +7,11 @@ publish: init
 
 init:
 	mkdir -p ${DEST}
-	cp -r ./ovpl-kit/docs/ ${DEST}
-	cp -r ./ovpl-kit/scripts ${DEST}
+	cp -r ./ovpl-kit/ovpl-docs/ ${DEST}
+	cp -r ./ovpl-kit/ovpl-scripts ${DEST}
+	cp -r ./ui-tool-kit/ui-docs/ ${DEST}
+	cp -r ./ui-tool-kit/ui-scripts ${DEST}
+	cp -r ./ui-tool-kit/ui-src ${DEST}
 
 clean:
 	rm -rf ${DEST}

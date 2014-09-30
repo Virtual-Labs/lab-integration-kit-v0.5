@@ -1,0 +1,817 @@
+#+Title:  VLEAD Status and Roadmap for Phase 2
+#+Author: Venkatesh Choppella and the VLEAD team
+#+Date:   [2014-07-15 Tue]
+#+SETUPFILE: ./org-templates/level-0.org
+* COMMENT Summary of VLEAD Activities: Aug 2013 - Jul 2014
+
+- Collecting and Mirroring of Virtual Lab sources
+
+- Creation of Portable Media and Packaged distribution
+
+- Integrating and Hosting  of Virtual Labs
+
+- Development of Virtual Lab Platform Services
+
+- Porting to Akaash and UI toolkit
+
+- Proposal for Phase 2
+
+* COMMENT Background  (detailed)
+
+- Mirroring of sources :: Sources of 154 labs collected.  [[file:./???][101 / 154]]
+     sources hosted openly on [[http://bitbucket.org/virtuallabs][Bit bucket]].  Virtual Lab GPL and
+     CC-BY-NC-SA licenses yet to be added.
+
+- Portable Media  ::  [[Http://vlead.vlabs.ac.in/2014/05/14/virtual-labs-on-portable-media/][released 17 labs on USB]].   Labs also available
+     as [[http:// ....][debian packages]].
+
+- Integration and Hosting  :: Hosted [[file:./???][79 out of 154 labs]].  22/79 are
+     auto-deployable.
+
+- Development of Virtual Lab Platform Services :: Auto-deploy,
+     Responsive UI, Virtual Lab performance.
+
+- Akaash :: Ported [[http://....][Computer Programming Lab]]  to Akaash  (from Flash to JS)
+
+
+* Status: Source collection, versioning and mirroring of 193 labs
+
+** Division of 193 labs as RT and Simulation
+
+|------------------+-----+---+---+---|
+| Lab type         | No. |   |   |   |
+|------------------+-----+---+---+---|
+| Remote Triggered |  22 |   |   |   |
+|------------------+-----+---+---+---|
+| Simulation       | 171 |   |   |   |
+|------------------+-----+---+---+---|
+| Total            | 193 |   |   |   |
+|------------------+-----+---+---+---|
+
+** Status of sources of 171 simulation labs
+
+|--------------------------------+-----+---+---+---|
+| Versioning status              | No. |   |   |   |
+|--------------------------------+-----+---+---+---|
+| versioned with VLEAD           |  79 |   |   |   |
+|--------------------------------+-----+---+---+---|
+| yet to be versioned with VLEAD |  92 |   |   |   |
+|--------------------------------+-----+---+---+---|
+| Total                          | 171 |   |   |   |
+|--------------------------------+-----+---+---+---|
+
+** COMMENT tree
+#+BEGIN_HTML
+ <iframe src="d3-tree-viewer/trees.html" height="300" width="500"></iframe>
+#+END_HTML
+
+** COMMENT  sources not with VLEAD
+
+|------------+---------------------+--------------------|
+| Institutes | No. Simulation Labs |        No. RT Labs |
+|            |       whose sources |      whose sources |
+|            |  are not with VLEAD | are not with VLEAD |
+|------------+---------------------+--------------------|
+| IIIT-H     |                   0 |                  0 |
+|------------+---------------------+--------------------|
+| IIT-D      |                   0 |                  5 |
+|------------+---------------------+--------------------|
+| IIT-B      |                   4 |                  3 |
+|------------+---------------------+--------------------|
+| IIT-R      |                   3 |                  2 |
+|------------+---------------------+--------------------|
+| IIT-K      |                  15 |                  0 |
+|------------+---------------------+--------------------|
+| IIT-M      |                   3 |                  2 |
+|------------+---------------------+--------------------|
+| IIT-G      |                   5 |                  4 |
+|------------+---------------------+--------------------|
+| IIT-KGP    |                  20 |                  4 |
+|------------+---------------------+--------------------|
+| Dayalbagh  |                   3 |                  2 |
+|------------+---------------------+--------------------|
+| NIT-K      |                   0 |                  0 |
+|------------+---------------------+--------------------|
+| COEP       |                   0 |                  0 |
+|------------+---------------------+--------------------|
+| Amrita     |                  39 |                  0 |
+|------------+---------------------+--------------------|
+| Total      |                  92 |                 22 |
+|------------+---------------------+--------------------|
+
+** Institute wise distribution of 92 sources yet to be versioned with VLEAD
+
+|-----------+----------------------|
+| Institute | No. simulation  labs |
+|-----------+----------------------|
+| IIT-B     |                    4 |
+|-----------+----------------------|
+| IIT-R     |                    3 |
+|-----------+----------------------|
+| IIT-K     |                   15 |
+|-----------+----------------------|
+| IIT-M     |                    3 |
+|-----------+----------------------|
+| IIT-G     |                    5 |
+|-----------+----------------------|
+| IIT-KGP   |                   20 |
+|-----------+----------------------|
+| Dayalbagh |                    3 |
+|-----------+----------------------|
+| Amrita    |                   39 |
+|-----------+----------------------|
+| Total     |                   92 |
+|-----------+----------------------|
+#+TBLFM: @10$2=vsum(@2..@-1)
+
+** COMMENT Sources yet to be versioned at VLEAD repositories
+
+#+BEGIN_HTML
+<chart type="pie" title="Institute-wise distribution of sources of 92 labs yet to be versioned with VLEAD" json-file-path="high-charts/json/simulation-sources-not-with-vlead.json"/>
+#+END_HTML
+
+** Licensing
+
+- All Labs now officially will be deployed with [[http://...][CC-BY-NC-SA]] and [[http://...][GPLv3]].
+
+- Licenses yet to be integrated with sources.
+
+** Mirroring
+
+ - Sources now archived in IIT Delhi on hard drive. 
+
+ - and on Bitbucket (http://bitbucket.org/virtual-labs)
+
+ - All sources will eventually be on Bitbucket.
+
+** Open Repositories
+
+- Repositories currently private.  Only lab developer and VLEAD have
+  access.
+
+- Will be opened up  once licensing info added. 
+
+* Status: Integration Levels and Hosting of 79 labs versioned with VLEAD
+
+** Integration levels of  79 versioned labs with VLEAD
+
+|---------+------------------+--------+---+---|
+| Level   | capability       | no. of |   |   |
+|         |                  |   labs |   |   |
+|---------+------------------+--------+---+---|
+| Level 1 | versioned        |     19 |   |   |
+|---------+------------------+--------+---+---|
+| Level 2 | builds manually  |      0 |   |   |
+|---------+------------------+--------+---+---|
+| Level 3 | auto builds      |     12 |   |   |
+|---------+------------------+--------+---+---|
+| Level 4 | deploys manually |     17 |   |   |
+|---------+------------------+--------+---+---|
+| Level 5 | auto deploys     |     31 |   |   |
+|---------+------------------+--------+---+---|
+| Total   |                  |     79 |   |   |
+|---------+------------------+--------+---+---|
+#+TBLFM: @8$3=vsum(@3..@-1)
+
+
+** Hosting status of 79 labs versioned with VLEAD
+
+|----------------------------------------------+-----+---+---+---|
+| Hosting status                               | No. |   |   |   |
+|----------------------------------------------+-----+---+---+---|
+| Hosted at virtual-labs.ac.in                 |  42 |   |   |   |
+|----------------------------------------------+-----+---+---+---|
+| Ready to host (awaiting conf. from lab dev.) |  12 |   |   |   |
+|----------------------------------------------+-----+---+---+---|
+| Only Simulations (not content) hosted        |  13 |   |   |   |
+|----------------------------------------------+-----+---+---+---|
+| Yet to be hosted                             |  12 |   |   |   |
+|----------------------------------------------+-----+---+---+---|
+| Total                                        |  79 |   |   |   |
+|----------------------------------------------+-----+---+---+---|
+
+#+TBLFM: @6$2=vsum(@2..@-1)
+
+* Status: Packaging, Porting to Akaash, Testing Page quality and Collecting Analytics
+
+#+BEGIN_HTML
+<script type="text/javascript" src="high-charts/js/jquery.1.8.2.min.js"> </script>
+<script type="text/javascript" src="high-charts/js/highcharts.js"> </script>
+<script type="text/javascript" src="high-charts/js/pie-with-legend.js"></script>
+#+END_HTML
+
+#+BEGIN_HTML
+<script>
+  window.onload = chart;
+</script>
+#+END_HTML
+
+** Packaging and Distribution of 17 labs
+
+ # Ctrl-click these so that they open in a new tab
+
+- [[http://vlead.vlabs.ac.in/2014/05/14/virtual-labs-on-portable-media/][Released 17 labs on USB]]
+
+- Packaged 17 labs as [[http://vlead.vlabs.ac.in/2014/07/14/virtual-media-in-debian-packages/][Debian distros]]. 
+
+** Porting of 1 lab to Akaash
+
+- Ported [[http://deploy.virtual-labs.ac.in/labs/cse02-CP/index.html][Computer Programming Lab]]  to Akaash  (from [[http://deploy.virtual-labs.ac.in/labs/cse02/][flash-based]] to
+  [[http://deploy.virtual-labs.ac.in/labs/cse02-CP/index.html][js-based]])
+
+- Effort: 9 intern-months for 10 experiments.
+
+** Testing of virtual lab page quality with UI toolkit
+
+*** Quality of pages that do not use UI toolkit
+
+#+BEGIN_HTML
+<chart type="pie" title="Yslow scores of 5,000 pages not using UI toolkit" json-file-path="high-charts/json/vlab-unoptimized-grade.json"/>
+#+END_HTML
+
+*** Quality of pages that use UI toolkit
+
+#+BEGIN_HTML
+<chart type="pie" title="Yslow scores of  6,000 pages using UI toolkit (http://virtual-labs.ac.in)" 
+json-file-path="high-charts/json/unoptimized_page_grades.json"/>
+#+END_HTML
+
+*** Quality of pages that use UI toolkit improved with Pagespeed
+
+#+BEGIN_HTML
+<chart type="pie" title="Yslow grades of pages using UI toolkit
+(http://virtual-labs.ac.in) after Pagespeed improvements" json-file-path="high-charts/json/optimized_page_grades.json"/>
+#+END_HTML
+
+
+*** COMMENT Plot of YSlow scores vs rendering time of web pages
+
+#+BEGIN_HTML
+<scatter title="rendering time of Virtual Lab pages" subtitle="unoptimized" xAxis="ySlow score" yAxis="rendering time (in ms)" pointformat="score: {point.x} time: {point.y}" json-file-path="high-charts/json/scatter.json"/>
+#+END_HTML
+#+CAPTION: Scatter plot illustrating correlation between YSlow scores and page rendering time for all 8787 available pages from [[virtual-labs.ac.in]].
+
+
+
+** Analytics for pages under virtual-labs.ac.in [Jun 25 2013 to July 11 2014]
+
+*** COMMENT Audience Overview
+
+#+CAPTION: Audience Analytics for pages under virtual-labs.ac.in 2013-06-25 to 2014-07-11
+#+NAME:   fig-audience-overview-virtual-labs-ac-in
+#+ATTR_HTML: width="600" style="border:2px solid black;
+
+
+[[file:./Analytics/Audience_Overview.png]]
+
+*** Behaviour Overview
+
+#+CAPTION: Behaviour Overview for pages under virtual-labs.ac.in 2013-06-25 to 2014-07-12
+#+NAME:   fig-audience-overview-virtual-labs-ac-in
+#+ATTR_HTML: width="600" style="border:2px solid black;
+
+[[file:./Analytics/Behaviour_Overview.png]]
+
+([[https://www.google.com/analytics/web/?hl=en#report/visitors-overview/a42255654w71951058p74248225/%3F_u.date00%3D20130625%26_u.date01%3D20140711%26overview-dimensionSummary.selectedGroup%3Ddemographics%26overview-dimensionSummary.selectedDimension%3Danalytics.country/][Live from Google]])
+
+*** COMMENT Returning users
+
+#+CAPTION: Behaviour Overview for pages under virtual-labs.ac.in 2013-06-25 to 2014-07-12
+#+NAME:   fig-audience-overview-virtual-labs-ac-in
+#+ATTR_HTML: width="600" style="border:2px solid black;
+
+[[file:./Analytics/Returning_users.png]]
+
+* Status: Designing Virtual Lab Platform Engineering
+
+** Virtual Lab Runtime stack
+
+#+CAPTION: Design of the Virtual Lab stack
+#+NAME:  fig-vlabs-runtime-stack
+#+ATTR_HTML: width="600" style="border:2px solid black;
+
+[[file:vps/LayeredRuntimeElaborated.png]]
+
+
+
+
+** Migrating to cloud
+
+#+CAPTION:  Migration to cloud IaaS 
+#+NAME:   fig-migrating-to-cloud
+#+ATTR_HTML: width="600" style="border:2px solid black;
+
+[[file:infrastructure/migrating-to-cloud.png]]
+
+  
+   [[https://docs.google.com/presentation/d/13VG-tOloCmFD6vu1XLmuAWBlqFqOI7dk2ncAGtcCSOc/edit#slide%3Did.g38e44b1be_085][edit image]]
+
+
+** Autodeploy architecture
+
+#+CAPTION: Block diagram illustrating Autodeploy for Virtual Labs
+#+NAME:   fig-autodeploy
+#+ATTR_HTML: width="400" style="border:2px solid black;
+
+[[file:./vps/services-at-play.jpg]]
+
+[[https://docs.google.com/drawings/d/1RgyRmh51GGZCJkFXBhXOoO9CZhNikAQ-ZgWXkmHdYOM/edit][edit image]]
+
+
+* Status: Implementation of Virtual Lab Platform Engineering Services
+
+** Platform Services
+
+|---------------------------+--------------+---------+----------------+---|
+| Service Type              | Implemented? | Tested? | In production? |   |
+|---------------------------+--------------+---------+----------------+---|
+| Virtualization Adaptors   | Yes          | Yes     | Some           |   |
+|---------------------------+--------------+---------+----------------+---|
+| Auto Deployment           | Yes          | Yes     | Yes            |   |
+|---------------------------+--------------+---------+----------------+---|
+| Build                     | Yes          | Yes     | Yes            |   |
+|---------------------------+--------------+---------+----------------+---|
+| Analytics                 | Yes          | Yes     | Some           |   |
+|---------------------------+--------------+---------+----------------+---|
+| Logging                   | Yes          | Yes     | No             |   |
+|---------------------------+--------------+---------+----------------+---|
+| Resource Monitoring on VM | No           | No      | No             |   |
+|---------------------------+--------------+---------+----------------+---|
+| Lab level  persistence    | No           | No      | No             |   |
+|---------------------------+--------------+---------+----------------+---|
+| Lab level single-signon   | No           | No      | No             |   |
+|---------------------------+--------------+---------+----------------+---|
+| Lab Dashboard             | No           | No      | No             |   |
+|---------------------------+--------------+---------+----------------+---|
+
+
+** Virtualization Adaptors
+
+|--------------+--------------+---------+----------------+---|
+| Adaptor Type | Implemented? | Tested? | In production? |   |
+|--------------+--------------+---------+----------------+---|
+| Desktop      | Yes          | Yes     | Yes            |   |
+|--------------+--------------+---------+----------------+---|
+| OpenVZ       | Yes          | Yes     | Yes            |   |
+|--------------+--------------+---------+----------------+---|
+| Eucalyptus   | Yes          | Yes     | No             |   |
+|--------------+--------------+---------+----------------+---|
+| OpenStack    | Yes          | Yes     | No             |   |
+|--------------+--------------+---------+----------------+---|
+
+  
+
+
+* COMMENT Metrics
+** Technologies used in Virtual Labs
+
+#+BEGIN_HTML
+<chart type="pie" title="Technologies used in Virtual Labs" json-file-path="high-charts/json/tech-in-lab.json"/>
+#+END_HTML
+
+** Levels of integretion for Virtual Labs
+#+BEGIN_HTML
+<chart type="pie" title="Levels of Integration of Virtual Labs" json-file-path="high-charts/json/levels-of-integretion.json"/>
+#+END_HTML
+
+**  Server Side dependencies for labs
+#+BEGIN_HTML
+<chart type="pie" title="License split of hosted labs" json-file-path="high-charts/json/server-side-deps.json"/>
+#+END_HTML
+
+
+#+BEGIN_HTML
+<script>
+window.onload = function() {
+        chart()
+
+        //Gen_pie_chart('#tech', 'virtual-lab-tech',  'technologies used in Virtual Labs', 'json/tech-in-lab.json');
+	//gen_pie_chart('#integretion', 'virtual-lab-tech',  'Levels of Integretion of Virtual Labs', 'json/levels-of-integretion.json');
+	//gen_pie_chart('#deps', 'virtual-lab-tech',  'License split of hosted Labs', 'json/server-side-deps.json');
+        //gen_pie_chart('#hosting-status', 'virtual-lab-tech',  'Hosting Status', 'json/versioned-labs.json');
+
+}
+</script>
+#+END_HTML
+
+* COMMENT Development of Virtual Lab Platform and Services
+
+** COMMENT Base Level server and Network configurations
+
+|------------+-------------------------------+---+---+---|
+| CPU        |                               |   |   |   |
+|------------+-------------------------------+---+---+---|
+| Memory     |                               |   |   |   |
+|------------+-------------------------------+---+---+---|
+| Storage    |                               |   |   |   |
+|------------+-------------------------------+---+---+---|
+| No. of VMs |                               |   |   |   |
+|------------+-------------------------------+---+---+---|
+| Network    | 150 Mbps shared NKN           |   |   |   |
+|            | 2Mbps STPI dedicated fallback |   |   |   |
+|------------+-------------------------------+---+---+---|
+
+
+** Base server performance
+
+** Autodeploy
+
+#+CAPTION: Block diagram illustrating Autodeploy for Virtual Labs
+#+NAME:   fig-autodeploy
+#+ATTR_HTML: width="600" style="border:2px solid black;
+
+
+[[file:./vps/services-at-play.jpg]]
+
+
+  #     ([[https://docs.google.com/a/vlabs.ac.in/drawings/d/1RgyRmh51GGZCJkFXBhXOoO9CZhNikAQ-ZgWXkmHdYOM/edit][edit online source]])
+
+
+** Virtual Lab page performance (measured using [[http://yslow.org][Yslow]])
+
+*** Performance Quality of Virtual Lab pages that do not  use UI toolkit
+
+#+BEGIN_HTML
+<chart type="pie" title="Grade of unoptimized http://vlab.co.in pages" json-file-path="high-charts/json/vlab-unoptimized-grade.json"/>
+#+END_HTML
+
+*** Performance Quality of Virtual Lab pages that do not use UI toolkit
+
+#+BEGIN_HTML
+<chart type="pie" title="Grade of unoptimized http://virtual-labs.ac.in pages" json-file-path="high-charts/json/unoptimized_page_grades.json"/>
+#+END_HTML
+
+
+*** Performance Quality of Virtual Lab pages that use UI toolkit after improving them with Pagespeed
+
+#+BEGIN_HTML
+<chart type="pie" title="Grade of optimized http://virtual-labs.ac.in pages" json-file-path="high-charts/json/optimized_page_grades.json"/>
+#+END_HTML
+
+
+*** Plot of YSlow scores vs rendering time of web pages
+
+
+
+* Roadmap: VLEAD tasks Jul 2014 to Jul 2015
+
+** Sep 2014 LDK 0.6
+
+#+CAPTION: Virtual Labs LDK 0.6 release
+#+ATTR_HTML: :border 2 :rules all :frame border
+
+|-----------------+------------------------------------+----------------------------------------------|
+| When            | What                               | Contents                                     |
+|-----------------+------------------------------------+----------------------------------------------|
+| September, 2014 | *Lab Development Kit 0.6*          |                                              |
+|-----------------+------------------------------------+----------------------------------------------|
+|                 |                                    |                                              |
+|                 |                                    | Lab auto-deployment service that runs        |
+|                 | *Lab Auto deploy service*          | on the lab integration engineer's            |
+|                 |                                    | workstation.                                 |
+|-----------------+------------------------------------+----------------------------------------------|
+|                 |                                    | Lab auto-deployment service that installs    |
+|                 | *Deployment on workstation*        | a lab in an independent VM on the hosting    |
+|                 |                                    | infrastructure of IIIT-H.                    |
+|-----------------+------------------------------------+----------------------------------------------|
+|                 | *Analytics*                        | A script to inject Google Analytics          |
+|                 |                                    | code into a lab's Web pages.                 |
+|-----------------+------------------------------------+----------------------------------------------|
+|                 |                                    |                                              |
+|                 | *Performance toolkit*              | A tool chain based on Yahoo YSlow            |
+|                 |                                    | and Google Page Speed. This lets             |
+|                 |                                    | integration engineers determine              |
+|                 |                                    | potential bottlenecks in efficiently         |
+|                 |                                    | serving as well as rendering the             |
+|                 |                                    | Web pages.                                   |
+|-----------------+------------------------------------+----------------------------------------------|
+|                 |                                    |                                              |
+|                 | *Portable Labs* and                | An iso image based on 32-bit version of      |
+|                 | *per discipline Debian Packages*   | Ubuntu 12.10 that provides offline access to |
+|                 |                                    | seventeen labs.                              |
+|                 |                                    |                                              |
+|                 |                                    | This will also contain a Debian packages for |
+|                 |                                    | each discipline. The package creation is     |
+|                 |                                    | automated and the tool will be made public.  |
+|-----------------+------------------------------------+----------------------------------------------|
+|                 |                                    |                                              |
+|                 | *Responsive UI Web 2.0 compliance* | A collection of  experiments and simulations |
+|                 | and *Documentation*                | that are built using *Pure* - a              |
+|                 |                                    | publicly avaialble library that helps in     |
+|                 |                                    | building responsive UI library.              |
+|                 |                                    |                                              |
+|                 |                                    | Experiments and simulations that use         |
+|                 |                                    | HTML5, Canvas, AJAX, and related APIs.       |
+|                 |                                    |                                              |
+|                 |                                    | Documentation of best practices for          |
+|                 |                                    | responsive UI and Web 2.0 compliance.        |
+|-----------------+------------------------------------+----------------------------------------------|
+
+*** COMMENT Sep 2015
+
+|-----------------+-----------------------------------+----------------------------------------------|
+|                 |                                   |                                              |
+| September, 2015 | *Lab Development Kit 1.0*         |                                              |
+|                 |                                   |                                              |
+|                 | *OVPL*                            | A new version of the auto deployment tool.   |
+|                 | The lab deployment tool           | This allows virtual labs to be deployed on   |
+|                 |                                   | clouds that provide APIs compatible with     |
+|                 |                                   | Amazon EC2 services.                         |
+|                 |                                   |                                              |
+|                 |                                   |                                              |
+|                 | *Single sign-in* and              | This allows a lab to persist its state       |
+|                 | *Persistence API*                 | across different invocations and uses.       |
+|                 |                                   | This will also enable quiz scores to be      |
+|                 |                                   | recorded on a per user basis.                |
+|                 |                                   |                                              |
+|                 |                                   |                                              |
+|                 | *Performance toolkit*             | A tool chain based on Yahoo YSlow            |
+|                 |                                   | and Google Page Speed. This lets             |
+|                 |                                   | integration engineers determine              |
+|                 |                                   | potential bottlenecks in efficiently         |
+|                 |                                   | serving as well as rendering the             |
+|                 |                                   | Web pages.                                   |
+|                 |                                   |                                              |
+|                 |                                   |                                              |
+|                 | *Portable Labs* and               | A new iso image based on 32-bit version of   |
+|                 | *per discipline Debian Packages*  | Ubuntu 12.10 containing twenty-seven labs.   |
+|                 |                                   |                                              |
+|                 |                                   | This will also contain a Debian packages for |
+|                 |                                   | each discipline. The package creation is     |
+|                 |                                   | automated and the tool will be made public.  |
+|                 |                                   |                                              |
+|                 |                                   |                                              |
+|                 | *Responsive UI Web 2.0 compiance* | A new drop of examples, documentation, and   |
+|                 |                                   | framework will be provided.                  |
+|                 |                                   |                                              |
+|-----------------+-----------------------------------+----------------------------------------------|
+
+*** COMMENT Apr 2016
+
+|-----------------+-----------------------------------+----------------------------------------------|
+|                 |                                   |                                              |
+| April, 2016     | *Lab Development Kit 2.0*         |                                              |
+|                 |                                   |                                              |
+|                 | *OVPL*                            | A new version of the auto deployment tool.   |
+|                 | The lab deployment tool           | This allows virtual labs to be deployed on   |
+|                 |                                   | clouds that provide APIs compatible with     |
+|                 |                                   | Amazon EC2 services.                         |
+|                 |                                   |                                              |
+|                 |                                   |                                              |
+|                 | *Single sign-in* and              | This allows a lab to persist its state       |
+|                 | *Persistence API*                 | across different invocations and uses.       |
+|                 |                                   | This will also enable quiz scores to be      |
+|                 |                                   | recorded on a per user basis.                |
+|                 |                                   |                                              |
+|                 |                                   |                                              |
+|                 | *Performance toolkit*             | A tool chain based on Yahoo YSlow            |
+|                 |                                   | and Google Page Speed. This lets             |
+|                 |                                   | integration engineers determine              |
+|                 |                                   | potential bottlenecks in efficiently         |
+|                 |                                   | serving as well as rendering the             |
+|                 |                                   | Web pages.                                   |
+|                 |                                   |                                              |
+|                 |                                   |                                              |
+|                 | *Portable Labs* and               | A new iso image based on 32-bit version of   |
+|                 | *per discipline Debian Packages*  | Ubuntu 12.10 containing twenty-seven labs.   |
+|                 |                                   |                                              |
+|                 |                                   | This will also contain a Debian packages for |
+|                 |                                   | each discipline. The package creation is     |
+|                 |                                   | automated and the tool will be made public.  |
+|                 |                                   |                                              |
+|                 |                                   |                                              |
+|                 | *Responsive UI Web 2.0 compiance* | A new drop of examples, documentation, and   |
+|                 |                                   | framework will be provided.                  |
+|-----------------+-----------------------------------+----------------------------------------------|
+
+** Integration and Hosting
+
+  - Coordinate versioning of all 193 lab sources with per institute
+    integration coordinators.
+
+  - Work with IICs to host 3 additional labs at integration
+    level 5.
+
+** Design and implementation of Virtual Lab platform services
+
+  - Adaptor services will be put into production.
+
+  - Lab dashboard will be developed
+
+** Cloud Migration
+
+  - Locate data centre and start migrating labs.
+
+
+* Roadmap: Tasks for integration teams
+
+
+** Year-wise plan
+
+|-----------+----------------------------------------------------------------------------|
+|      Year | Goal                                                                       |
+|-----------+----------------------------------------------------------------------------|
+|      2014 | Learn technologies necessary to make labs Web 2.0 complaint.               |
+|           | Learn Responsive user interface design principles and frameworks.          |
+| September | Learn version controlling with Github.                                     |
+|   October |                                                                            |
+|  November | Develop a complete understanding of the current design and implementation. |
+|  December | This involves understanding the software dependencies for building the     |
+|           | lab, software required to run the lab, memory and disk requirements, and   |
+|           | so on.                                                                     |
+|           |                                                                            |
+|           | Develop/port and deliver at least two experiments/simulations              |
+|           | of a specific lab.                                                         |
+|           |                                                                            |
+|-----------+----------------------------------------------------------------------------|
+|           |                                                                            |
+|      2015 | Complete the development of the lab. This includes integrating             |
+|           | experiments with single sign-in and persistence services. This also        |
+|   January | requires the integration engineer to develop unit tests, documentation,    |
+|       ... | and participate in code reviews. The lab must be tested using the auto     |
+|  December | deployment tool that VLEAD would be providing.                             |
+|           |                                                                            |
+|-----------+----------------------------------------------------------------------------|
+|           |                                                                            |
+|      2016 | The goal is to fix defects, improve performance, improve the UI and UX     |
+|           | based on the feedback provided by field trials.                            |
+|   January |                                                                            |
+|  February | Alpha, Beta and Release candidates of the lab are field-tested.            |
+|           | The lab is released for public use in March.                               |
+|           |                                                                            |
+|-----------+----------------------------------------------------------------------------|
+
+
+
+** Fine-grained effort estimate of integration for one lab
+
+For effort and schedule estimation purposes, we assume one lab
+developer would be integrating all experiments of a lab. In the
+following, we estimate that one integration engineer will require
+eighteen calendar months to port a lab.
+
+
+|------+-----------+---------------------------------------------------------------|
+| Year | Month     | Integration Tasks and Activities                              |
+|------+-----------+---------------------------------------------------------------|
+| 2014 | September | Develop familiarity with the current design                   |
+|      |           | and implementation of the lab.                                |
+|      |           |                                                               |
+|      |           |                                                               |
+|      |           | Software requirements include build                           |
+|      |           | requirements and the runtime requirements.                    |
+|      |           |                                                               |
+|      |           |                                                               |
+|      |           | Learn JavaScript, CSS and HTML5.                              |
+|      |           |                                                               |
+|      |           | Participate in the workshop conducted at                      |
+|      |           | IIIT-Hyderabad and learn the development                      |
+|      |           | processes. This involves using Git for                        |
+|      |           | version controlling and VLEAD's auto                          |
+|      |           | deployment tool to install lab on a workstation.              |
+|      |           |                                                               |
+|      |           |                                                               |
+|      | October   | The integration engineer will develop, at his/her             |
+|      | November  | respective institute, one simulation of the lab.              |
+|      |           |                                                               |
+|      |           |                                                               |
+|      |           |                                                               |
+|      | December  | An integration engineer will develop, at his/her              |
+|      |           | respective institute, second experiment of the lab.           |
+|      |           |                                                               |
+|------+-----------+---------------------------------------------------------------|
+|      |           |                                                               |
+| 2015 | January   | The integration engineer will use the Persistence             |
+|      | February  | API (developed by VLEAD) to equip the two experiments         |
+|      |           | with single sign-in and quiz state persistence.               |
+|      |           |                                                               |
+|      |           | The integration engineer should test the experiments          |
+|      |           | thoroughly before moving on to developing other               |
+|      |           | experiments.                                                  |
+|      |           |                                                               |
+|      |           |                                                               |
+|      |           |                                                               |
+|      | March     | The engineer ports two more experiments. The totally          |
+|      | April     | tally at the end of April will be four experiments            |
+|      |           | fully functioning along with persistence support.             |
+|      |           |                                                               |
+|      |           |                                                               |
+|      | May       | Project review.                                               |
+|      |           |                                                               |
+|      |           | The goal is to assess the state of lab integration.           |
+|      |           | At this juncture, it will be possible to identify             |
+|      |           | labs that are not keeping pace with the rest of the           |
+|      |           | development, understand the challenges faced by the           |
+|      |           | integration engineers, and propose mitigation plans.          |
+|      |           |                                                               |
+|      |           | All stakeholders will come together and discuss               |
+|      |           | changes that may be required in the development               |
+|      |           | processes and tools and APIs provided by VLEAD.               |
+|      |           |                                                               |
+|      |           |                                                               |
+|      | June      | Develop/port three more experiments. There will be            |
+|      | July      | eight feature complete experiments available for use.         |
+|      | August    |                                                               |
+|      | September | Stakeholders may start field trials. The labs will            |
+|      |           | also be available for use across the country.                 |
+|      |           |                                                               |
+|      |           |                                                               |
+|      | October   | Develop three more experiments.                               |
+|      | November  |                                                               |
+|      | December  | Integrate experiments with new version of Persistence         |
+|      |           | API that VLEAD would have released by this time.              |
+|      |           | Run regression tests to ensure that the integration           |
+|      |           | with new API is stable.                                       |
+|      |           |                                                               |
+|      |           | Ten experiments will be feature complete and usable.          |
+|      |           |                                                               |
+|      |           | The lab will reach *Alpha* milestone.                         |
+|      |           |                                                               |
+|------+-----------+---------------------------------------------------------------|
+|      |           |                                                               |
+| 2016 | January   | Defect fixing, performance improvements, UI improvements,     |
+|      |           | general software maintenance work.                            |
+|      |           |                                                               |
+|      |           | The lab will reach *Beta* milestone at the end of January.    |
+|      |           |                                                               |
+|      |           |                                                               |
+|      | February  | Defect fixing, performance improvements, UI improvements,     |
+|      |           | general software maintenance work.                            |
+|      |           |                                                               |
+|      |           | The lab will migrate from Beta to *Release Candidate* status. |
+|      |           |                                                               |
+|      |           |                                                               |
+|      | March     | The lab is published for general use.                         |
+|      |           |                                                               |
+|------+-----------+---------------------------------------------------------------|
+
+
+* COMMENT More
+
+
+#+CAPTION: slide
+#+NAME:   portable -1
+Portable Media
+     [[./portable-media/portable-media.jpg]]
+
+#+CAPTION: slide
+#+NAME:   portable -1
+Portable Labs
+     [[./portable-media/portable-labs.jpg]]
+
+#+CAPTION: slide
+#+NAME:   vps-1
+Transforming lab source from a URL to a web application
+     [[./vps/Transforming lab src frroma url to a web application.jpg]]
+
+#+CAPTION: slide
+#+NAME:   vps-1
+Services at Play
+     [[./vps/Services at Play.jpg]]
+
+#+CAPTION: slide
+#+NAME:   vps-1
+Overview of Audience
+    [[./Analytics/Audience_Overview.jpeg]]
+
+#+CAPTION: slide
+#+NAME:   vps-1
+Overview of Behaviour
+    [[./Analytics/Behaviour_Overview.jpeg]]
+
+#+CAPTION: slide
+#+NAME:   vps-1
+Returning Users
+    [[./Analytics/Returing_users.jpeg]]
+
+
+#+CAPTION: slide
+#+NAME:   vps-1
+Virtual Labs Hosting Plans at System Level
+    [[./infrastructure/Virtual Labs Hosting Plans at System-Level.png]]
+
+#+CAPTION: slide
+#+NAME:   vps-1
+System Level Architecture
+    [[./infrastructure/Systems Level Architecture.png]]
+
+#+CAPTION: slide
+#+NAME:   vps-1
+Communications Interplay
+    [[./infrastructure/Communication Diagram.png]]
+
+#+CAPTION: slide
+#+NAME:   vps-1
+Migration to Cloud
+    [[./infrastructure/Migrating to Cloud.png]]
+
+
+
+
+
+
+
+
+
+fig:SED-HR4049
+     [[./i[[./vps/Transforming lab src frroma url to a web application.jpg]]

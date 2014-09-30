@@ -1,0 +1,63 @@
+y#+Title:  OVPL Installation Process
+#+Author: Prakash B Hegade, Amulya Sri, Thirumal R
+#+Date:   [2014-09-16 Tue]
+#+SETUPFILE: ./org-templates/level-0.org
+
+
+* Set up proxy
+- Replace the <value> in the below commands with the values provided by your network admin to set the proxies.
+#+begin_src shell
+ export http_proxy="<value>"
+ export https_proxy="<value>"
+#+end_src 
+
+* Cloning 
+- Clone the LIK repository by running the command below.
+#+begin_src shell
+ git clone https://github.com/Virtual-Labs/lab-integration-kit-v0.5.git
+#+end_src 
+
+* Installing OpenVZ
+- In the src/ovpl-kit/scripts directory, "openvz-install.sh" installs OpenVZ on Your CentOS.
+- You have to run this script by the command below from src/ovpl-kit/scripts directory.
+#+begin_src shell
+ sudo sh openvz-install.sh
+#+end_src 
+
+Reboot the system after installation of openVZ and login with openVZ kernel.
+
+* Installing OVPL Dependencies
+- In the src/ovpl-kit/scripts/dependencies directory, "dependencies.sh" installs all the dependencies required for running OVPL. 
+- You have to run this script by running the command below from src/ovpl-kit/scripts/dependencies directory.
+#+begin_src shell
+sudo sh dependencies.sh
+#+end_src
+
+
+* Installing OVPL 
+- OVPL source code is present in src/ovpl-kit/ovpl directory.
+Pre-requisites
+- Change the values of proxies in src/ovpl-kit/ovpl/config/config.json
+- Change the SUBNET values in src/ovpl-kit/ovpl/src/settings.py and src/ovpl-kit/ovpl/src/adapters/settings.py
+  to match the subnet of your base machine.
+
+- Now go to src/ovpl-kit/ovpl/src/ and run make.
+#+begin_src shell
+make
+#+end_src
+  This will run both the controller server and adapter server. Check this by running
+
+#+begin_src shell
+ps -eaf | grep python2
+#+end_src
+
+
+* Deploying the Lab
+- Go to browser and type, "127.0.0.1:8080", you will see a test page.
+- Enter lab id and URL and submit it.
+- You can see the deployment status of the lab in the terminal. The IP address of the container is prompted in the terminal where the lab is being deployed.
+- Lab can be hence used from the given IP.
+- Check the logs at /root/log/ovpl.log and /ovpl/root/centosvzadapter.log on the base machine.
+- Check the logs on the container at /root/VMManager/log/vmmanager.log
+
+
