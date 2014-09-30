@@ -1,0 +1,30 @@
+* INDEX PAGE
+
+** Structure of OVPL-KIT
+
+*** Pre-requisites:
+CentOS 6.5 successfully installed on your machine
+
+** Version Control Basics
+[[https://github.com/Virtual-Labs/lab-integration-kit-v0.5/blob/master/src/ovpl-kit/docs/src/version-control.org][ Version Control and Git]]
+
+** Installing OVPL
+
+*** Install OpenVZ
+[[https://github.com/Virtual-Labs/lab-integration-kit-v0.5/blob/master/src/ovpl-kit/docs/src/openVZ-talk.org][openVZ Guidelines]]
+
+*** Install Dependencies
+[[https://github.com/Virtual-Labs/lab-integration-kit-v0.5/blob/master/src/ovpl-kit/docs/src/ovpl-installation.org][Dependencies for OVPL]]
+
+*** Understanding Scripts and FAQ's
+[[https://github.com/Virtual-Labs/lab-integration-kit-v0.5/blob/master/src/ovpl-kit/docs/src/Understanding-Scripts.org][Understanding Scripts]]
+
+
+[[https://github.com/Virtual-Labs/lab-integration-kit-v0.5/blob/master/src/ovpl-kit/docs/src/FAQ-ovpl.org][FAQ's]]
+
+*** Install OVPL and Deploy Lab
+[[https://github.com/Virtual-Labs/lab-integration-kit-v0.5/blob/master/src/ovpl-kit/docs/src/ovpl-installation.org][OVPL Installation]]
+
+** Using "makefile"
+
+You can create the contents of build using source by running the makefile
