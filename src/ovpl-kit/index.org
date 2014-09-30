@@ -14,11 +14,10 @@ CentOS 6.5 successfully installed on your machine
 [[https://github.com/Virtual-Labs/lab-integration-kit-v0.5/blob/master/src/ovpl-kit/docs/src/openVZ-talk.org][openVZ Guidelines]]
 
 *** Install Dependencies
-[[https://github.com/Virtual-Labs/lab-integration-kit-v0.5/blob/master/src/ovpl-kit/docs/src/ovpl-installation.org] [Dependencies for OVPL
+[[https://github.com/Virtual-Labs/lab-integration-kit-v0.5/blob/master/src/ovpl-kit/docs/src/ovpl-installation.org] [Dependencies for OVPL]]
 
 *** Understanding Scripts and FAQ's
-[[https://github.com/Virtual-Labs/lab-integration-kit-v0.5/blob/master/src/ovpl-kit/docs/src/Understanding-Scripts.org] [Understanding Scripts
-
+[[https://github.com/Virtual-Labs/lab-integration-kit-v0.5/blob/master/src/ovpl-kit/docs/src/Understanding-Scripts.org] [Understanding Scripts]]
 [[https://github.com/Virtual-Labs/lab-integration-kit-v0.5/blob/master/src/ovpl-kit/docs/src/FAQ-ovpl.org][FAQ's]]
 
 *** Install OVPL and Deploy Lab
