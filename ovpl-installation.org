@@ -17,7 +17,7 @@ place it in meta directory.
 In the scripts directory, "centos_prepare_ovpl.sh" will set up the OVPL on Your CentOS.
 
 To run:
-#-+begin_src shell
+#+begin_src shell
  sh centos_prepare_ovpl.sh
 #+end_src 
 The steps next explain what happens when the script runs.
