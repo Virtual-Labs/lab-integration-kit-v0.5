@@ -14,8 +14,9 @@ Next,obtain opneVZ template OS file(ubuntu-12.04-custom-x86_64.tar.gz) from:
 place it in meta directory.
 
 * Setting Up OVPL for CentOS
-- In the scripts directory, "centos_prepare_ovpl.sh" will set up the OVPL on Your CentOS.
-- To run:
+In the scripts directory, "centos_prepare_ovpl.sh" will set up the OVPL on Your CentOS.
+
+To run:
 #-+begin_src shell
  sh centos_prepare_ovpl.sh
 #+end_src 
@@ -23,7 +24,7 @@ The steps next explain what happens when the script runs.
 
 
 * Ready to start
-- The script initially checks if you are in super user mode, if you have all the necessary files to run the scripts and proxies are set if required. If any fails prompts the user and script has to be run again after the necessary action. 
+The script initially checks if you are in super user mode, if you have all the necessary files to run the scripts and proxies are set if required. If any fails prompts the user and script has to be run again after the necessary action. 
 
 
 * Installing OVPL Dependencies
